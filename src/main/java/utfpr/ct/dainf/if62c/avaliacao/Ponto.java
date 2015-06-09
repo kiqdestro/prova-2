@@ -10,6 +10,36 @@ package utfpr.ct.dainf.if62c.avaliacao;
  */
 public class Ponto {
     private double x, y, z;
+    
+    public Ponto () {
+        x = 0;
+        y = 0;
+        z = 0;
+    }
+    
+    public Ponto (double x, double y, double z) {
+        this.x = x;
+        this.y = y;
+        this.z = z;
+    }
+    
+    public String toString(Ponto p) {
+        return p.getNome()+"("+x+", "+y+", "+z+")";
+    }
+    
+    public boolean equals(Ponto p) {
+        if(this.x.equals(p.x) && this.y.equals(p.y) && this.z.equals(p.z)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    
+    public double dist(Ponto p) {
+        return Math.sqrt(Math.pow((p.x+this.x),2)+Math.pow((p.y+this.y),2)+Math.pow((p.z+this.z),2));
+    }
+    
+    
 
     /**
      * Retorna no nome não-qualificado da classe.
