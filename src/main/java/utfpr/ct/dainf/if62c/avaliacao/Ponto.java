@@ -28,7 +28,7 @@ public class Ponto {
     }
     
     public boolean equals(Ponto p) {
-        if(this.x.equals(p.x) && this.y.equals(p.y) && this.z.equals(p.z)) {
+        if(this.x==p.x && this.y==p.y && this.z==p.z) {
             return true;
         } else {
             return false;
